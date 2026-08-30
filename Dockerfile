@@ -1,6 +1,11 @@
 FROM amazoncorretto:17
-LABEL  version="1.0"
-EXPOSE 5050
+
+LABEL version="1.0"
+
 WORKDIR /app
-COPY target/docker2-0.0.1-SNAPSHOT.jar /app/docker2.jar
-ENTRYPOINT ["java","-jar","docker2.jar"]
+
+COPY target/*.jar app.jar
+
+EXPOSE 5050
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
