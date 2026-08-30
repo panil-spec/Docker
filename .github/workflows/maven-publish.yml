@@ -38,7 +38,7 @@ jobs:
 
       # 6. Build Docker image
       - name: Build Docker image
-        run: docker build -t anilpullagura/docker2:latest .
+        run: docker build -t anilpullagura/dockerdc:latest .
 
       # 7. Push Docker image to Docker Hub
       - name: Push Docker image
